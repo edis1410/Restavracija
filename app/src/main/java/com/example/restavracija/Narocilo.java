@@ -10,5 +10,7 @@ public class Narocilo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_narocilo);
+        Bundle extras = getIntent().getExtras();
+        int mizaID = extras.getInt("mizaID");
     }
 }
