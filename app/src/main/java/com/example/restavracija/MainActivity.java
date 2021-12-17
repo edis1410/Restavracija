@@ -24,7 +24,7 @@ import com.google.zxing.Result;
 public class MainActivity extends AppCompatActivity {
     private CodeScanner mCodeScanner;
 
-    private static int CAMERA_REQUEST_CODE = 101;
+    private static final int CAMERA_REQUEST_CODE = 101;
     String[] tab = {Manifest.permission.CAMERA};
 
     @Override
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull @org.jetbrains.annotations.NotNull String[] permissions, @NonNull @org.jetbrains.annotations.NotNull int[] grantResults) {
         if (requestCode == CAMERA_REQUEST_CODE){
             if (grantResults == null || grantResults[0] != PackageManager.PERMISSION_GRANTED){
-                Toast.makeText(this, "Vpali kamero", Toast.LENGTH_SHORT);
+                Toast.makeText(this, "Vpali kamero", Toast.LENGTH_SHORT).show();
             }
             else {
                 //Uspesna
