@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "689900930558",
+    "project_id": "restavracija-64aad",
+    "storage_bucket": "restavracija-64aad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689900930558:android:cb4a9ec8c74bd7c62cecaf",
+        "android_client_info": {
+          "package_name": "com.example.restavracija"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "689900930558-2c5bmthgi4j92llt2v8tkfgmul1ku0da.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVgXY5nK3NoJvhpeZyXWO4xE_LwtNF5ps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "689900930558-2c5bmthgi4j92llt2v8tkfgmul1ku0da.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
