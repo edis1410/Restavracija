@@ -40,9 +40,29 @@ public class Narocilo extends AppCompatActivity {
 
         Button d1 = findViewById(R.id.dodaj1);
         Button o1 = findViewById(R.id.odstrani1);
+        Button d2 = findViewById(R.id.dodaj2);
+        Button o2 = findViewById(R.id.odstrani2);
+        Button d3 = findViewById(R.id.dodaj3);
+        Button o3 = findViewById(R.id.odstrani3);
+        Button d4 = findViewById(R.id.dodaj4);
+        Button o4 = findViewById(R.id.odstrani4);
+        Button d5 = findViewById(R.id.dodaj5);
+        Button o5 = findViewById(R.id.odstrani5);
         TextView v1 = findViewById(R.id.kolicina1);
+        TextView v2 = findViewById(R.id.kolicina2);
+        TextView v3 = findViewById(R.id.kolicina3);
+        TextView v4 = findViewById(R.id.kolicina4);
+        TextView v5 = findViewById(R.id.kolicina5);
         final int[] i = {1};
         i[0] = Integer.parseInt(v1.getText().toString());
+        final int[] j = {1};
+        j[0] = Integer.parseInt(v2.getText().toString());
+        final int[] k = {1};
+        k[0] = Integer.parseInt(v3.getText().toString());
+        final int[] l = {1};
+        l[0] = Integer.parseInt(v4.getText().toString());
+        final int[] m = {1};
+        m[0] = Integer.parseInt(v5.getText().toString());
 
         d1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +75,6 @@ public class Narocilo extends AppCompatActivity {
                 }
             }
         });
-
         o1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,6 +87,97 @@ public class Narocilo extends AppCompatActivity {
             }
         });
 
+        d2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String vrednost;
+                if (j[0] >= 0) {
+                    j[0] += 1;
+                    vrednost = String.valueOf(j[0]);
+                    v2.setText(vrednost);
+                }
+            }
+        });
+        o2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String vrednost;
+                if (j[0] > 0) {
+                    j[0] -= 1;
+                    vrednost = String.valueOf(j[0]);
+                    v2.setText(vrednost);
+                }
+            }
+        });
+
+        d3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String vrednost;
+                if (k[0] >= 0) {
+                    k[0] += 1;
+                    vrednost = String.valueOf(k[0]);
+                    v3.setText(vrednost);
+                }
+            }
+        });
+        o3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String vrednost;
+                if (k[0] > 0) {
+                    k[0] -= 1;
+                    vrednost = String.valueOf(k[0]);
+                    v3.setText(vrednost);
+                }
+            }
+        });
+
+        d4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String vrednost;
+                if (l[0] >= 0) {
+                    l[0] += 1;
+                    vrednost = String.valueOf(l[0]);
+                    v4.setText(vrednost);
+                }
+            }
+        });
+        o4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String vrednost;
+                if (l[0] > 0) {
+                    l[0] -= 1;
+                    vrednost = String.valueOf(l[0]);
+                    v4.setText(vrednost);
+                }
+            }
+        });
+
+        d5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String vrednost;
+                if (m[0] >= 0) {
+                    m[0] += 1;
+                    vrednost = String.valueOf(m[0]);
+                    v5.setText(vrednost);
+                }
+            }
+        });
+        o5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String vrednost;
+                if (m[0] > 0) {
+                    m[0] -= 1;
+                    vrednost = String.valueOf(m[0]);
+                    v5.setText(vrednost);
+                }
+            }
+        });
 
 
         Button oddajNarocilo = findViewById(R.id.oddaj);
@@ -76,7 +186,8 @@ public class Narocilo extends AppCompatActivity {
         oddajNarocilo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                narocilo = "";
+
+                narocilo = "Izdelek 1: "+v1+" Izdelek 2: "+v2+" Izdelek 3: "+v3+" Izdelek 4: "+v4+" Izdelek 5: "+v5;
                 x = db.oddajNarocilo(mizaID+"",narocilo);
                 if (x)
                     Toast.makeText(Narocilo.this, "Uspeh", Toast.LENGTH_SHORT).show();

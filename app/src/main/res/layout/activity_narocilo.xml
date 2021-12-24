@@ -159,7 +159,7 @@
                     android:text="0" />
 
                 <Button
-                    android:id="@+id/dodaj"
+                    android:id="@+id/dodaj3"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="280dp"
