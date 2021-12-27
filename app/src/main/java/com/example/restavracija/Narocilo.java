@@ -1,21 +1,19 @@
 package com.example.restavracija;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
-import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.example.restavracija.DBHelper;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class Narocilo extends AppCompatActivity {
     String narocilo;
@@ -36,7 +34,8 @@ public class Narocilo extends AppCompatActivity {
         );
 
         Bundle extras = getIntent().getExtras();
-        int mizaID = extras.getInt("mizaID");
+        String mizaID = extras.getString("mizaID");
+
 
         Button d1 = findViewById(R.id.dodaj1);
         Button o1 = findViewById(R.id.odstrani1);
@@ -63,6 +62,42 @@ public class Narocilo extends AppCompatActivity {
         l[0] = Integer.parseInt(v4.getText().toString());
         final int[] m = {1};
         m[0] = Integer.parseInt(v5.getText().toString());
+        ImageView s1 = findViewById(R.id.slika1);
+        ImageView s2 = findViewById(R.id.slika2);
+        ImageView s3 = findViewById(R.id.slika3);
+        ImageView s4 = findViewById(R.id.slika4);
+        ImageView s5 = findViewById(R.id.slika5);
+
+        s1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onImmageShowPopupWindowClick(v, 1);
+            }
+        });
+        s2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onImmageShowPopupWindowClick(v, 2);
+            }
+        });
+        s3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onImmageShowPopupWindowClick(v, 3);
+            }
+        });
+        s4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onImmageShowPopupWindowClick(v, 4);
+            }
+        });
+        s5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onImmageShowPopupWindowClick(v, 5);
+            }
+        });
 
         d1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -186,16 +221,52 @@ public class Narocilo extends AppCompatActivity {
         oddajNarocilo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                String IDT = mizaID;
                 narocilo = "Izdelek 1: "+v1+" Izdelek 2: "+v2+" Izdelek 3: "+v3+" Izdelek 4: "+v4+" Izdelek 5: "+v5;
-                x = db.oddajNarocilo(mizaID+"",narocilo);
+                x = db.oddajNarocilo(IDT,narocilo);
                 if (x)
-                    Toast.makeText(Narocilo.this, "Uspeh", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Narocilo.this,"Usepeh" , Toast.LENGTH_SHORT).show();
             }
         });
 
     }
 
+    public void onImmageShowPopupWindowClick(View view, int i) {
+
+        // inflate the layout of the popup window
+        LayoutInflater inflater = (LayoutInflater)
+                getSystemService(LAYOUT_INFLATER_SERVICE);
+        View popupView;
+        switch (i){
+            case 1: popupView = inflater.inflate(R.layout.p1, null);break;
+            case 2: popupView = inflater.inflate(R.layout.p2, null);break;
+            case 3: popupView = inflater.inflate(R.layout.p3, null);break;
+            case 4: popupView = inflater.inflate(R.layout.p4, null);break;
+            case 5: popupView = inflater.inflate(R.layout.p5, null);break;
+            default: popupView = inflater.inflate(R.layout.p1, null);
+        }
+
+
+        // create the popup window
+        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+        boolean focusable = true; // lets taps outside the popup also dismiss it
+        final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
+
+
+        // show the popup window
+        // which view you pass in doesn't matter, it is only used for the window tolken
+        popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+
+        // dismiss the popup window when touched
+        popupView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                popupWindow.dismiss();
+                return true;
+            }
+        });
+    }
 
 
 }
