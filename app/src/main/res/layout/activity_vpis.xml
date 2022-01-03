@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Vpis">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Geslo:"
+        android:textSize="20sp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="310dp"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="293dp" />
+
+    <EditText
+        android:id="@+id/geslo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="300dp"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="275dp" />
+
+    <Button
+        android:id="@+id/vpis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vpis"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="500dp"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="381dp" />
+</RelativeLayout>

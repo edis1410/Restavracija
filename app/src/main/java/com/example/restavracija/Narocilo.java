@@ -222,7 +222,7 @@ public class Narocilo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String IDT = mizaID;
-                narocilo = "Izdelek 1: "+v1+" Izdelek 2: "+v2+" Izdelek 3: "+v3+" Izdelek 4: "+v4+" Izdelek 5: "+v5;
+                narocilo = "Izdelek 1: "+v1.getText()+" Izdelek 2: "+v2.getText()+" Izdelek 3: "+v3.toString()+" Izdelek 4: "+v4.toString()+" Izdelek 5: "+v5.toString();
                 x = db.oddajNarocilo(IDT,narocilo);
                 if (x)
                     Toast.makeText(Narocilo.this,"Usepeh" , Toast.LENGTH_SHORT).show();

@@ -6,13 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
-public class PrvaStran extends AppCompatActivity {
+public class Vpis extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prva_stran);
+        setContentView(R.layout.activity_vpis);
 
         this.getWindow().getDecorView().setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
@@ -23,23 +24,18 @@ public class PrvaStran extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
         );
 
-        Button s = findViewById(R.id.skeniraj);
         Button v = findViewById(R.id.vpis);
-
-        s.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(PrvaStran.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
+        EditText g = findViewById(R.id.geslo);
 
         v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PrvaStran.this, Vpis.class);
-                startActivity(intent);
+                if (g.getText().toString().equals("admin")){
+                    Intent intent = new Intent(Vpis.this, Pregled.class);
+                    startActivity(intent);
+                }
             }
         });
+
     }
 }
