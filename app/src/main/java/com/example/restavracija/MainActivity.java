@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setupPermission();
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(intent);
                         }
                         else
-                            Toast.makeText(MainActivity.this, result.getText(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Ne ustrezna QR koda!", Toast.LENGTH_SHORT).show();
                     }
                 });
             }
@@ -107,10 +108,7 @@ public class MainActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull @org.jetbrains.annotations.NotNull String[] permissions, @NonNull @org.jetbrains.annotations.NotNull int[] grantResults) {
         if (requestCode == CAMERA_REQUEST_CODE){
             if (grantResults == null || grantResults[0] != PackageManager.PERMISSION_GRANTED){
-                Toast.makeText(this, "Vpali kamero", Toast.LENGTH_SHORT).show();
-            }
-            else {
-                //Uspesna
+                Toast.makeText(this, "Prosimo dovolite uporabo kamere", Toast.LENGTH_SHORT).show();
             }
         }
     }

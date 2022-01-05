@@ -56,6 +56,14 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
+    public Cursor getID ()
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("Select ID from Narocila", null);
+        return cursor;
+
+    }
+
 
     public Cursor getdata ()
     {

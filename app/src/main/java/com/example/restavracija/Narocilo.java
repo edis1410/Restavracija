@@ -27,7 +27,7 @@ public class Narocilo extends AppCompatActivity {
     DBHelper db;
     boolean x;
     String mizaID;
-
+    double skupno;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -133,7 +133,7 @@ public class Narocilo extends AppCompatActivity {
                     i[0] += 1;
                     vrednost = String.valueOf(i[0]);
                     v1.setText(vrednost);
-                    oddajNarocilo.setText( (i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2])) +"€ - Oddaj narocilo");
+                    oddajNarocilo.setText( Math.round(( i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2]) ) * 100.0) / 100.0 +"€ - Oddaj narocilo");
                 }
             }
         });
@@ -146,7 +146,7 @@ public class Narocilo extends AppCompatActivity {
                     i[0] -= 1;
                     vrednost = String.valueOf(i[0]);
                     v1.setText(vrednost);
-                    oddajNarocilo.setText( (i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2])) +"€ - Oddaj narocilo");
+                    oddajNarocilo.setText( Math.round(( i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2]) ) * 100.0) / 100.0 +"€ - Oddaj narocilo");
 
                 }
             }
@@ -161,7 +161,7 @@ public class Narocilo extends AppCompatActivity {
                     j[0] += 1;
                     vrednost = String.valueOf(j[0]);
                     v2.setText(vrednost);
-                    oddajNarocilo.setText( (i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2])) +"€ - Oddaj narocilo");
+                    oddajNarocilo.setText( Math.round(( i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2]) ) * 100.0) / 100.0 +"€ - Oddaj narocilo");
 
                 }
             }
@@ -175,7 +175,7 @@ public class Narocilo extends AppCompatActivity {
                     j[0] -= 1;
                     vrednost = String.valueOf(j[0]);
                     v2.setText(vrednost);
-                    oddajNarocilo.setText( (i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2])) +"€ - Oddaj narocilo");
+                    oddajNarocilo.setText( Math.round(( i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2]) ) * 100.0) / 100.0 +"€ - Oddaj narocilo");
 
                 }
             }
@@ -190,7 +190,7 @@ public class Narocilo extends AppCompatActivity {
                     k[0] += 1;
                     vrednost = String.valueOf(k[0]);
                     v3.setText(vrednost);
-                    oddajNarocilo.setText( (i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2])) +"€ - Oddaj narocilo");
+                    oddajNarocilo.setText( Math.round(( i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2]) ) * 100.0) / 100.0 +"€ - Oddaj narocilo");
 
                 }
             }
@@ -204,7 +204,7 @@ public class Narocilo extends AppCompatActivity {
                     k[0] -= 1;
                     vrednost = String.valueOf(k[0]);
                     v3.setText(vrednost);
-                    oddajNarocilo.setText( (i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2])) +"€ - Oddaj narocilo");
+                    oddajNarocilo.setText( Math.round(( i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2]) ) * 100.0) / 100.0 +"€ - Oddaj narocilo");
 
                 }
             }
@@ -219,7 +219,7 @@ public class Narocilo extends AppCompatActivity {
                     l[0] += 1;
                     vrednost = String.valueOf(l[0]);
                     v4.setText(vrednost);
-                    oddajNarocilo.setText( (i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2])) +"€ - Oddaj narocilo");
+                    oddajNarocilo.setText( Math.round(( i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2]) ) * 100.0) / 100.0 +"€ - Oddaj narocilo");
 
                 }
             }
@@ -233,7 +233,7 @@ public class Narocilo extends AppCompatActivity {
                     l[0] -= 1;
                     vrednost = String.valueOf(l[0]);
                     v4.setText(vrednost);
-                    oddajNarocilo.setText( (i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2])) +"€ - Oddaj narocilo");
+                    oddajNarocilo.setText( Math.round(( i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2]) ) * 100.0) / 100.0 +"€ - Oddaj narocilo");
 
                 }
             }
@@ -248,7 +248,7 @@ public class Narocilo extends AppCompatActivity {
                     m[0] += 1;
                     vrednost = String.valueOf(m[0]);
                     v5.setText(vrednost);
-                    oddajNarocilo.setText( (i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2])) +"€ - Oddaj narocilo");
+                    oddajNarocilo.setText( Math.round(( i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2]) ) * 100.0) / 100.0 +"€ - Oddaj narocilo");
 
                 }
             }
@@ -262,7 +262,7 @@ public class Narocilo extends AppCompatActivity {
                     m[0] -= 1;
                     vrednost = String.valueOf(m[0]);
                     v5.setText(vrednost);
-                    oddajNarocilo.setText( (i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2])) +"€ - Oddaj narocilo");
+                    oddajNarocilo.setText( Math.round(( i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2]) ) * 100.0) / 100.0 +"€ - Oddaj narocilo");
 
                 }
             }
@@ -272,6 +272,7 @@ public class Narocilo extends AppCompatActivity {
         oddajNarocilo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                skupno = Math.round(( i[0]*Double.parseDouble(c1[2]) + j[0]*Double.parseDouble(c2[2]) + k[0]*Double.parseDouble(c3[2]) + l[0]*Double.parseDouble(c4[2]) + m[0]*Double.parseDouble(c5[2]) ) * 100.0) / 100.0;
                 if (!v1.getText().equals("0"))
                     narocilo = c1[0] + ": " + v1.getText() + "  ";
                 if (!v2.getText().equals("0"))
@@ -298,7 +299,7 @@ public class Narocilo extends AppCompatActivity {
                     narocilo = "";
                 }
                 else {
-                    narocilo = narocilo + "\nNačin plačila: "+ radioButton.getText() + "\n" ;
+                    narocilo = narocilo + "\nNačin plačila: "+ radioButton.getText() + " ("+ skupno +"€)\n" ;
                     x = db.oddajNarocilo(mizaID, narocilo);
                     if (x)
                         Toast.makeText(Narocilo.this,"Usepešno oddano naročilo" , Toast.LENGTH_SHORT).show();
@@ -327,19 +328,13 @@ public class Narocilo extends AppCompatActivity {
             default: popupView = inflater.inflate(R.layout.p1, null);
         }
 
-
-        // create the popup window
         int width = LinearLayout.LayoutParams.WRAP_CONTENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-        boolean focusable = true; // lets taps outside the popup also dismiss it
+        boolean focusable = true;
         final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
 
-
-        // show the popup window
-        // which view you pass in doesn't matter, it is only used for the window tolken
         popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
 
-        // dismiss the popup window when touched
         popupView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {

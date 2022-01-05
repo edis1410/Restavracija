@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Vpis extends AppCompatActivity {
 
@@ -33,6 +34,9 @@ public class Vpis extends AppCompatActivity {
                 if (g.getText().toString().equals("admin")){
                     Intent intent = new Intent(Vpis.this, Pregled.class);
                     startActivity(intent);
+                }
+                else {
+                    Toast.makeText(Vpis.this,"Napačno geslo!" , Toast.LENGTH_LONG).show();
                 }
             }
         });
