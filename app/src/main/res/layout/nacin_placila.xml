@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FFC107">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:text="Izberite način plačila" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="50dp">
+
+        <RadioButton
+            android:id="@+id/gotovina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gotovina"
+            android:textColor="#000000"/>
+
+        <RadioButton
+            android:id="@+id/kartica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kartica"
+            android:textColor="#000000"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/pop1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="30dp"
+        android:textSize="22sp"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="120dp"
+        android:text="Oddaj" />
+
+</RelativeLayout>

@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +30,8 @@ public class Pregled extends AppCompatActivity {
 
         TextView v =  findViewById(R.id.view);
         Button b =  findViewById(R.id.brisi);
+        String tabID[] = {"1","2","3","4","5"};
+        ArrayAdapter<String> spinnerArrayAdapter;
 
         DBHelper db = new DBHelper(this);
         Cursor res = db.getdata();
@@ -36,23 +41,27 @@ public class Pregled extends AppCompatActivity {
         }
         StringBuffer buffer = new StringBuffer();
         while (res.moveToNext()){
-            buffer.append("Številka mize :"+res.getString(0)+"\n");
-            buffer.append("Naročilo :"+res.getString(1)+"\n");
+            buffer.append("Številka mize: "+res.getString(0)+"\n");
+            buffer.append("Naročilo: "+res.getString(1));
         }
 
         v.setText(buffer.toString());
 
+        Spinner spin = (Spinner) findViewById(R.id.spinner);
+        spinnerArrayAdapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_dropdown_item, tabID);
+        spin.setAdapter(spinnerArrayAdapter);
+
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                db.deletedata("1");
-
-                db.deletedata("2");
-                db.deletedata("3");
+                db.deletedata(spin.getSelectedItem().toString());
             }
         });
 
     }
 
+    /*void setText(){
 
+    }*/
 }

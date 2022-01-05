@@ -7,23 +7,22 @@
     tools:context=".Narocilo">
 
 
-
-
     <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card1"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="30dp"
                 android:layout_width="350dp"
-                android:layout_height="150dp">
+                android:layout_height="150dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp">
 
                 <ImageView
                     android:id="@+id/slika1"
@@ -35,21 +34,21 @@
                     android:id="@+id/izdelek1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
                     android:layout_marginLeft="170dp"
-                    android:text="PICA\n5.00€"
-                    android:textSize="25sp"
-                    android:textColor="#000000"/>
+                    android:layout_marginTop="15dp"
+                    android:text="PICA \n 5.00 €"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
 
                 <TextView
                     android:id="@+id/kolicina1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="105dp"
                     android:layout_marginLeft="250dp"
-                    android:textSize="20sp"
+                    android:layout_marginTop="105dp"
                     android:text="0"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/dodaj1"
@@ -59,8 +58,8 @@
                     android:layout_marginTop="95dp"
                     android:background="@drawable/custom_button"
                     android:text="+"
-                    app:backgroundTint="#FFC107"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+                    app:backgroundTint="#FFC107" />
 
                 <Button
                     android:id="@+id/odstrani1"
@@ -69,18 +68,18 @@
                     android:layout_marginStart="185dp"
                     android:layout_marginTop="95dp"
                     android:background="@drawable/custom_button"
-                    app:backgroundTint="#FFC107"
                     android:text="-"
-                    android:textSize="20dp"/>
+                    android:textSize="20dp"
+                    app:backgroundTint="#FFC107" />
 
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="30dp"
                 android:layout_width="350dp"
-                android:layout_height="150dp">
+                android:layout_height="150dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp">
 
                 <ImageView
                     android:id="@+id/slika2"
@@ -92,21 +91,21 @@
                     android:id="@+id/izdelek2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
                     android:layout_marginLeft="170dp"
-                    android:text="PICA\n5.00€"
-                    android:textSize="25sp"
-                    android:textColor="#000000"/>
+                    android:layout_marginTop="15dp"
+                    android:text="PICA \n 5.00 €"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
 
                 <TextView
                     android:id="@+id/kolicina2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="105dp"
                     android:layout_marginLeft="250dp"
-                    android:textSize="20sp"
+                    android:layout_marginTop="105dp"
                     android:text="0"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/dodaj2"
@@ -115,9 +114,9 @@
                     android:layout_marginStart="280dp"
                     android:layout_marginTop="95dp"
                     android:background="@drawable/custom_button"
-                    android:textSize="20dp"
                     android:text="+"
-                    app:backgroundTint="#FFC107"/>
+                    android:textSize="20dp"
+                    app:backgroundTint="#FFC107" />
 
                 <Button
                     android:id="@+id/odstrani2"
@@ -126,18 +125,18 @@
                     android:layout_marginStart="185dp"
                     android:layout_marginTop="95dp"
                     android:background="@drawable/custom_button"
-                    android:textSize="20dp"
                     android:text="-"
-                    app:backgroundTint="#FFC107"/>
+                    android:textSize="20dp"
+                    app:backgroundTint="#FFC107" />
 
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="30dp"
                 android:layout_width="350dp"
-                android:layout_height="150dp">
+                android:layout_height="150dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp">
 
                 <ImageView
                     android:id="@+id/slika3"
@@ -149,21 +148,21 @@
                     android:id="@+id/izdelek3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
                     android:layout_marginLeft="170dp"
-                    android:text="PICA\n5.00€"
-                    android:textSize="25sp"
-                    android:textColor="#000000"/>
+                    android:layout_marginTop="15dp"
+                    android:text="PICA \n 5.00 €"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
 
                 <TextView
                     android:id="@+id/kolicina3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="105dp"
                     android:layout_marginLeft="250dp"
-                    android:textSize="20sp"
+                    android:layout_marginTop="105dp"
                     android:text="0"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/dodaj3"
@@ -172,9 +171,9 @@
                     android:layout_marginStart="280dp"
                     android:layout_marginTop="95dp"
                     android:background="@drawable/custom_button"
-                    android:textSize="20dp"
                     android:text="+"
-                    app:backgroundTint="#FFC107"/>
+                    android:textSize="20dp"
+                    app:backgroundTint="#FFC107" />
 
                 <Button
                     android:id="@+id/odstrani3"
@@ -183,18 +182,18 @@
                     android:layout_marginStart="185dp"
                     android:layout_marginTop="95dp"
                     android:background="@drawable/custom_button"
-                    android:textSize="20dp"
                     android:text="-"
-                    app:backgroundTint="#FFC107"/>
+                    android:textSize="20dp"
+                    app:backgroundTint="#FFC107" />
 
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="30dp"
                 android:layout_width="350dp"
-                android:layout_height="150dp">
+                android:layout_height="150dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp">
 
                 <ImageView
                     android:id="@+id/slika4"
@@ -206,21 +205,21 @@
                     android:id="@+id/izdelek4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
                     android:layout_marginLeft="170dp"
-                    android:text="PICA\n5.00€"
-                    android:textSize="25sp"
-                    android:textColor="#000000"/>
+                    android:layout_marginTop="15dp"
+                    android:text="PICA \n 5.00 €"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
 
                 <TextView
                     android:id="@+id/kolicina4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="105dp"
                     android:layout_marginLeft="250dp"
-                    android:textSize="20sp"
+                    android:layout_marginTop="105dp"
                     android:text="0"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/dodaj4"
@@ -229,9 +228,9 @@
                     android:layout_marginStart="280dp"
                     android:layout_marginTop="95dp"
                     android:background="@drawable/custom_button"
-                    android:textSize="20dp"
                     android:text="+"
-                    app:backgroundTint="#FFC107"/>
+                    android:textSize="20dp"
+                    app:backgroundTint="#FFC107" />
 
                 <Button
                     android:id="@+id/odstrani4"
@@ -240,18 +239,18 @@
                     android:layout_marginStart="185dp"
                     android:layout_marginTop="95dp"
                     android:background="@drawable/custom_button"
-                    android:textSize="20dp"
                     android:text="-"
-                    app:backgroundTint="#FFC107"/>
+                    android:textSize="20dp"
+                    app:backgroundTint="#FFC107" />
 
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="30dp"
                 android:layout_width="350dp"
-                android:layout_height="150dp">
+                android:layout_height="150dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp">
 
                 <ImageView
                     android:id="@+id/slika5"
@@ -263,21 +262,21 @@
                     android:id="@+id/izdelek5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
                     android:layout_marginLeft="170dp"
-                    android:text="PICA\n5.00€"
-                    android:textSize="25sp"
-                    android:textColor="#000000"/>
+                    android:layout_marginTop="15dp"
+                    android:text="PICA \n 5.00 €"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
 
                 <TextView
                     android:id="@+id/kolicina5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="105dp"
                     android:layout_marginLeft="250dp"
-                    android:textSize="20sp"
+                    android:layout_marginTop="105dp"
                     android:text="0"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/dodaj5"
@@ -286,9 +285,9 @@
                     android:layout_marginStart="280dp"
                     android:layout_marginTop="95dp"
                     android:background="@drawable/custom_button"
-                    android:textSize="20dp"
                     android:text="+"
-                    app:backgroundTint="#FFC107"/>
+                    android:textSize="20dp"
+                    app:backgroundTint="#FFC107" />
 
                 <Button
                     android:id="@+id/odstrani5"
@@ -297,10 +296,76 @@
                     android:layout_marginStart="185dp"
                     android:layout_marginTop="95dp"
                     android:background="@drawable/custom_button"
-                    android:textSize="20dp"
                     android:text="-"
-                    app:backgroundTint="#FFC107"/>
+                    android:textSize="20dp"
+                    app:backgroundTint="#FFC107" />
 
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp">
+
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Opombe:"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/opombe"
+                    android:layout_width="match_parent"
+                    android:layout_height="107dp"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:layout_marginTop="40dp"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp">
+
+
+                <TextView
+                    android:id="@+id/placilo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Izberite način plačila"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
+
+                <RadioGroup
+                    android:id="@+id/group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginTop="50dp">
+
+                    <RadioButton
+                        android:id="@+id/radioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gotovina" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kartica" />
+                </RadioGroup>
 
             </androidx.cardview.widget.CardView>
 
@@ -310,10 +375,10 @@
                 android:id="@+id/placeholder"
                 android:layout_width="wrap_content"
                 android:layout_height="1dp"
-                android:layout_marginTop="105dp"
                 android:layout_marginLeft="250dp"
-                android:textSize="20sp"
-                android:text="" />
+                android:layout_marginTop="105dp"
+                android:text=""
+                android:textSize="20sp" />
 
         </LinearLayout>
     </ScrollView>
